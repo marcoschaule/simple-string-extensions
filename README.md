@@ -2,6 +2,7 @@
 
 A set of simple extensions for the JavaScript String class.
 
+[![Build Status](https://travis-ci.org/marcoschaule/simple-string-extensions.svg?branch=master)](https://travis-ci.org/marcoschaule/simple-string-extensions)
 
 ## Installation and usage
 
