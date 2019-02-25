@@ -3,8 +3,14 @@
     "allowSyntheticDefaultImports": true,
     "declaration": true,
     "module": "commonjs",
-    "outDir": "./dist",
+    "outDir": "dist",
     "target": "es5",
     "strict": true
-    }
+  },
+  "include": [
+    "src/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+  ]
 }

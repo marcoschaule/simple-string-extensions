@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "pretest": "npm run build",
+    "clear": "rm -rf ./dist",
+    "pretest": "npm run clear && npm run build",
     "test": "mocha ./dist/text-transform.spec.js"
   },
   "keywords": [
