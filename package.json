@@ -1,0 +1,27 @@
+{
+  "name": "simple-string-extensions",
+  "version": "1.0.0",
+  "description": "A set of simple extension functions for the JavaScript String class.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "pretest": "npm run build",
+    "test": "mocha ./dist/text-transform.spec.js"
+  },
+  "keywords": [
+    "JavaScript string extensions"
+  ],
+  "author": "Marco Schaule <marco.schaule@net-designer.net>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.6",
+    "chai": "^4.2.0",
+    "mocha": "^6.0.1",
+    "typescript": "^3.3.3333"
+  },
+  "dependencies": {
+    "@types/safe-regex": "^1.1.2",
+    "safe-regex": "^2.0.1"
+  }
+}
