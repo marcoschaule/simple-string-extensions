@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A set of simple extension functions for the JavaScript String class.",
   "main": "./dist/index.js",
-  "types": "./dist/index.d.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "setup": "npm install",
     "build": "tsc",
