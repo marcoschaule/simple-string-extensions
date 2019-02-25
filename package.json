@@ -2,12 +2,18 @@
   "name": "simple-string-extensions",
   "version": "1.0.0",
   "description": "A set of simple extension functions for the JavaScript String class.",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.js",
   "scripts": {
+    "setup": "npm install",
     "build": "tsc",
-    "clear": "rm -rf ./dist",
-    "pretest": "npm run clear && npm run build",
-    "test": "mocha ./dist/text-transform.spec.js"
+    "build-watch": "tsc --watch",
+    "clean": "shx rm -rf ./dist",
+    "pretest": "npm run clean && npm run build",
+    "test": "npm run test-only",
+    "test-only": "mocha ./dist/text-transform.spec.js",
+    "typedoc": "typedoc --out ./docs --mode modules --tsconfig ./tsconfig.json ./src/",
+    "posttypedoc": "shx cp .nojekyll ./docs/.nojekyll"
   },
   "keywords": [
     "JavaScript string extensions"
@@ -21,12 +27,14 @@
   "bugs": {
     "url": "https://github.com/marcoschaule/simple-string-extensions/issues"
   },
-  "homepage":"https://github.com/marcoschaule/simple-string-extensions#readme" ,
+  "homepage": "https://github.com/marcoschaule/simple-string-extensions#readme",
   "devDependencies": {
     "@types/chai": "^4.1.7",
     "@types/mocha": "^5.2.6",
     "chai": "^4.2.0",
     "mocha": "^6.0.1",
+    "shx": "^0.3.2",
+    "typedoc": "^0.14.1",
     "typescript": "^3.3.3333"
   },
   "dependencies": {
