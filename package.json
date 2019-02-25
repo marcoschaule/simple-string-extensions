@@ -14,6 +14,14 @@
   ],
   "author": "Marco Schaule <marco.schaule@net-designer.net>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcoschaule/simple-string-extensions.git"
+  },
+  "bugs": {
+    "url": "https://github.com/marcoschaule/simple-string-extensions/issues"
+  },
+  "homepage":"https://github.com/marcoschaule/simple-string-extensions#readme" ,
   "devDependencies": {
     "@types/chai": "^4.1.7",
     "@types/mocha": "^5.2.6",
