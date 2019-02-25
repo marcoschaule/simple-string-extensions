@@ -2,6 +2,7 @@
 
 A set of simple extensions for the JavaScript String class.
 
+
 ## Installation and usage
 
 In terminal/console type:
@@ -23,6 +24,7 @@ const someCapitalizedStr = someStr.capitalize();
 const someCamelCaseStr   = someStr.toCamelCase();
 ```
 
+
 ## Available extensions
 
 * `capitalize`: A method to capitalize strings.
@@ -32,3 +34,12 @@ const someCamelCaseStr   = someStr.toCamelCase();
 * `toPascalCase`: A method to transform strings into pascal case.
 * `toSnakeCase`: A method to transform strings into snake case.
 * `toSpaceCase`: A method to transform strings into space case.
+
+
+## Run tests
+
+Tests can be run with:
+
+```npm
+npm run test
+```
