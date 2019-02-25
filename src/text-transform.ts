@@ -5,16 +5,84 @@
 // Export nothing for this file to become a module.
 export {};
 
-// Declare global string extensions for them to be defined in the next step.
+/**
+ * Simple extension of the JavaScript String class.
+ *
+ * @author Marco Schaule <marco.schaule@net-designer.net>
+ */
 declare global {
   interface String {
-    capitalize()    : string;
-    toCamelCase()   : string;
+
+    /**
+     * String extension method to turn the current string
+     * into a capitalized string (first letter big).
+     *
+     * @type Function
+     * @this String  the JavaScript String class
+     * @returns the current string in capitalized form
+     */
+    capitalize(): string;
+
+    /**
+     * String extension method to turn the current string
+     * into camel case.
+     *
+     * @type Function
+     * @this String  the JavaScript String class
+     * @returns the current string in camel case form
+     */
+    toCamelCase(): string;
+
+    /**
+     * String extension method to turn the current string
+     * into constant case.
+     *
+     * @type Function
+     * @this String  the JavaScript String class
+     * @returns the current string in constant case form
+     */
     toConstantCase(): string;
-    toDashCase()    : string;
-    toPascalCase()  : string;
-    toSnakeCase()   : string;
-    toSpaceCase()   : string;
+
+    /**
+     * String extension method to turn the current string
+     * into dash case.
+     *
+     * @type Function
+     * @this String  the JavaScript String class
+     * @returns the current string in dash case form
+     */
+    toDashCase(): string;
+
+    /**
+     * String extension method to turn the current string
+     * into pascal case.
+     *
+     * @type Function
+     * @this String  the JavaScript String class
+     * @returns the current string in pascal case form
+     */
+    toPascalCase(): string;
+
+    /**
+     * String extension method to turn the current string
+     * into snake case.
+     *
+     * @type Function
+     * @this String  the JavaScript String class
+     * @returns the current string in snake case form
+     */
+    toSnakeCase(): string;
+
+    /**
+     * String extension method to turn the current string
+     * into space case.
+     *
+     * @type Function
+     * @this String  the JavaScript String class
+     * @returns the current string in space case form
+     */
+    toSpaceCase(): string;
+
   }
 }
 
@@ -22,14 +90,6 @@ declare global {
 // Library
 // *****************************************************************************
 
-/**
- * String extension method to turn the current string
- * into a capitalized string (first letter big).
- *
- * @type {Function}
- * @this {String} the JavaScript String class
- * @returns {string} string in capitalized form
- */
 String.prototype.capitalize = function() {
   const str = this.trim();
 
@@ -42,14 +102,6 @@ String.prototype.capitalize = function() {
 
 // *****************************************************************************
 
-/**
- * String extension method to turn the current string
- * into camel case.
- *
- * @type {Function}
- * @this {String} the JavaScript String class
- * @returns {string} string in camel case form
- */
 String.prototype.toCamelCase = function() {
   let str           = this.trim();
   const regex1: any = /[A-Z0-9ÄÖÜ_]+/;
@@ -70,56 +122,24 @@ String.prototype.toCamelCase = function() {
 
 // *****************************************************************************
 
-/**
- * String extension method to turn the current string
- * into constant case.
- *
- * @type {Function}
- * @this {String} the JavaScript String class
- * @returns {string} string in constant case form
- */
 String.prototype.toConstantCase = function() {
   return (this.toSnakeCase().toUpperCase());
 };
 
 // *****************************************************************************
 
-/**
- * String extension method to turn the current string
- * into dash case.
- *
- * @type {Function}
- * @this {String} the JavaScript String class
- * @returns {string} string in dash case form
- */
 String.prototype.toDashCase = function() {
   return this.toSnakeCase().replace(/_/g, '-');
 };
 
 // *****************************************************************************
 
-/**
- * String extension method to turn the current string
- * into pascal case.
- *
- * @type {Function}
- * @this {String} the JavaScript String class
- * @returns {string} string in pascal case form
- */
 String.prototype.toPascalCase = function() {
   return (this.toCamelCase().capitalize());
 };
 
 // *****************************************************************************
 
-/**
- * String extension method to turn the current string
- * into snake case.
- *
- * @type {Function}
- * @this {String} the JavaScript String class
- * @returns {string} string in snake case form
- */
 String.prototype.toSnakeCase = function() {
   const regex1: any = /\ /g;
   const regex2: any = /[a-zäöüß][A-Zäöü]/g;
@@ -136,14 +156,6 @@ String.prototype.toSnakeCase = function() {
 
 // *****************************************************************************
 
-/**
- * String extension method to turn the current string
- * into space case.
- *
- * @type {Function}
- * @this {String} the JavaScript String class
- * @returns {string} string in space case form
- */
 String.prototype.toSpaceCase = function() {
   const regex1: any = /\_/g;
   return this.toSnakeCase().replace(regex1, ' ').toLowerCase();

@@ -9,7 +9,7 @@ A set of simple extensions for the JavaScript String class.
 
 In terminal/console type:
 
-```npm
+```
 npm install simple-string-extensions
 ```
 
@@ -42,6 +42,6 @@ const someCamelCaseStr   = someStr.toCamelCase();
 
 Tests can be run with:
 
-```npm
+```
 npm run test
 ```
