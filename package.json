@@ -1,20 +1,20 @@
 {
   "name": "simple-string-extensions",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A set of simple extension functions for the JavaScript String class.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
     "clean": "shx rm -rf ./dist",
     "build": "tsc",
-      "prebuild": "npm run clean",
+    "prebuild": "npm run clean",
     "build-watch": "npm run build -- --watch",
     "setup": "npm install",
     "test": "npm run test-only",
-      "pretest": "npm run build",
+    "pretest": "npm run build",
     "test-only": "mocha ./dist/text-transform.spec.js",
     "typedoc": "typedoc --out ./docs --mode modules --tsconfig ./tsconfig.json ./src/",
-      "posttypedoc": "shx cp .nojekyll ./docs/.nojekyll"
+    "posttypedoc": "shx cp .nojekyll ./docs/.nojekyll"
   },
   "keywords": [
     "JavaScript string extensions"
