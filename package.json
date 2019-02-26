@@ -5,15 +5,16 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "setup": "npm install",
-    "build": "tsc",
-    "build-watch": "tsc --watch",
     "clean": "shx rm -rf ./dist",
-    "pretest": "npm run clean && npm run build",
+    "build": "tsc",
+      "prebuild": "npm run clean",
+    "build-watch": "npm run build -- --watch",
+    "setup": "npm install",
     "test": "npm run test-only",
+      "pretest": "npm run build",
     "test-only": "mocha ./dist/text-transform.spec.js",
     "typedoc": "typedoc --out ./docs --mode modules --tsconfig ./tsconfig.json ./src/",
-    "posttypedoc": "shx cp .nojekyll ./docs/.nojekyll"
+      "posttypedoc": "shx cp .nojekyll ./docs/.nojekyll"
   },
   "keywords": [
     "JavaScript string extensions"
